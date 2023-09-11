@@ -1,4 +1,10 @@
-set psql_source="c:\Program Files\PostgreSQL\16rc1\bin\psql.exe"
+@ECHO OFF
+CLS
+
+CALL "app_path_func.cmd" psql.exe PROGPATH
+ECHO %PROGPATH%
+
+set psql_source="%PROGPATH%"
 set sql_source="%cd%"
 
 echo "******* Введите пароль пользователя test_user = 12345678 *******"
